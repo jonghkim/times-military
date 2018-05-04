@@ -1,0 +1,139 @@
+{% extends "anniversary/layout.html" %}
+{% block head %}
+<style>
+
+</style>
+{% endblock %}
+{% block content %}
+{% load static %}
+<!--========== PARALLAX ==========-->
+
+<!-- Wrapper for slides -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div class="container">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+    </div>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="img-responsive" src="{% static "img/1920x1080/01.jpg" %}" alt="Slider Image">
+            <div class="container">
+                <div class="carousel-centered">
+                    <div class="margin-b-40">
+                      <h1 class="carousel-title">About Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="img-responsive" src="{% static "img/1920x1080/02.jpg" %}" alt="Slider Image">
+            <div class="container">
+                <div class="carousel-centered">
+                    <div class="margin-b-40">
+                      <h1 class="carousel-title">About Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--========== PARALLAX ==========-->
+
+<!--========== PAGE LAYOUT ==========-->
+<!-- Team -->
+<div class="bg-color-sky-light">
+    <div class="content-lg container">
+        <div class="row margin-b-40">
+            <div class="col-sm-6">
+                <h2>Meet the Team</h2>
+            </div>
+        </div>
+        <!--// end row -->
+
+        <div class="row">
+            <!-- Team -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive" src="{% static "img/teammember/kjh.jpg"%} "  alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">김종호</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+            <!-- End Team -->
+
+            <!-- Team -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive" src="{% static "img/teammember/sgh.jpg"%}" alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">신건호</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+            <!-- End Team -->
+
+            <!-- Team -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive" src="{% static "img/teammember/ybh.jpg"%}" alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">윤병하</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+		</div>
+        <div class="row">
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive"  style= "width: 95%; height: auto;" src="{% static "img/teammember/rjg2.png"%} "  alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">류준규</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive"  style= "width: 200%; height: auto;" src="{% static "img/teammember/ktj.jpg"%} "  alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">김태진</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive" style= "width: 95%; height: auto;" src="{% static "img/teammember/shk.jpg"%} "  alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">송형근</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+
+            <!-- End Team -->
+        </div>
+        <!--// end row -->
+    </div>
+</div>
+
+<div align="center">
+<img src="http://www.katc.mil.kr/_res/recruit_photo/sqd/20171109/20171109.20171111.230434.JPG" style="max-width:80%; height: auto;">
+</div>
+
+<!-- End Team -->
+<!--========== END PAGE LAYOUT ==========-->
+<!-- End Work -->
+{% endblock %}

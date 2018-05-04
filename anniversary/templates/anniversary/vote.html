@@ -1,0 +1,68 @@
+{% extends "anniversary/layout.html" %}
+{% block head %}
+<style>
+form {
+  width: 350px;
+}
+
+
+button {
+  border: 0;
+  background: transparent;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+button:hover,
+button:hover + button,
+button:hover + button + button,
+button:hover + button + button + button,
+button:hover + button + button + button + button {
+  color: #faa;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<!-- Wrapper for slides -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="img-responsive" src="{% static "img/1920x1080/01.jpg" %}" alt="Slider Image">
+            <div class="container">
+                <div class="carousel-centered">
+                  <h1 class="carousel-title"> {{name}} ★ 1-5</h1>
+                  {% if name %}
+                  <tr>
+                       <td><h1 class="text-uppercase margin-l-20" style="color: #fff"># {{rest.desc}}</h1></td>
+                       <td><h1 class="text-uppercase margin-l-20" style="color: #fff"># {{rest.restaurant_type}} </h1></td>
+                       <td><h1 class="text-uppercase margin-l-20" style="color: #fff"># 별점 투표
+                            <form action = "/restaurant/vote/result/{{rest.id}}/" method = "post">
+                              {% csrf_token %}
+
+                                  <button type="submit" name="rating" value="5-{{name}}">&#9733;</button>
+                                  <button type="submit" name="rating" value="4-{{name}}">&#9733;</button>
+                                  <button type="submit" name="rating" value="3-{{name}}">&#9733;</button>
+                                  <button type="submit" name="rating" value="2-{{name}}">&#9733;</button>
+                                  <button type="submit" name="rating" value="1-{{name}}">&#9733;</button>
+
+                            </form>
+                            </h1>
+
+                            <!--<button name="" value="{{rest.id}}" class="btn-theme btn-theme-sm btn-white-brd text-uppercase"><h1> 투표 </h1></button>-->
+                      </td>
+                   </tr>
+                  {% else %}
+                    해당 되는 Restaurant가 없습니다.
+                  {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

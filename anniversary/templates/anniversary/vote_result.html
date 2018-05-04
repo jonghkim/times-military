@@ -1,0 +1,67 @@
+{% extends "anniversary/layout.html" %}
+{% block head %}
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "theme2",//theme1
+		title:{
+			text: "{{name}}"
+		},
+		animationEnabled: false,   // change to true
+		data: [
+		{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "column",
+			dataPoints: [
+				{ label: "1",  y: {{list_rating.1}}  },
+				{ label: "2", y: {{list_rating.2}}  },
+				{ label: "3", y: {{list_rating.3}}  },
+				{ label: "4",  y: {{list_rating.4}}  },
+				{ label: "5",  y: {{list_rating.5}}  }
+			]
+		}
+		]
+	});
+	chart.render();
+}
+
+</script>
+<style>
+.canvasjs-chart-credit {
+   display: none;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<!--========== PARALLAX ==========-->
+
+<!-- Wrapper for slides -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="img-responsive" src="{% static "img/1920x1080/01.jpg" %}" alt="Slider Image">
+            <div class="container">
+
+                <div class="carousel-centered">
+                  <h1 class="carousel-title"> {{name}} 투표 결과</h1>
+                   <div id="chartContainer" style="height: 300px; width: 400px;"> </div>
+                   <h1 class="text-uppercase margin-l-20" style="color: #fff"> #평균 결과: {{ave_rating}} </h1>
+                   <h1 class="text-uppercase margin-l-20" style="color: #fff"> #총 평가자: {{num_rating}} 명</h1>
+                   <a href="{% url 'anniversary:restaurant' %}"  class="btn-theme btn-theme-sm btn-white-brd text-uppercase">닫기</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--========== PAGE LAYOUT ==========-->
+
+{% endblock %}

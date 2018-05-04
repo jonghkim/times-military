@@ -1,0 +1,489 @@
+{% extends "anniversary/layout.html" %}
+{% block content %}
+{% load static %}
+<!--========== SLIDER ==========-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div class="container">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+    </div>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="img-responsive" src="{% static "img/1920x1080/01.jpg" %}" alt="Slider Image">
+            <div class="container">
+                <div class="carousel-centered">
+                    <div class="margin-b-40">
+                        <h1 class="carousel-title">NICE P&I</h1>
+                        <h1 class="carousel-title">The Military Times</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="img-responsive" src="{% static "img/1920x1080/02.jpg" %}" alt="Slider Image">
+            <div class="container">
+                <div class="carousel-centered">
+                    <div class="margin-b-40">
+                        <h2 class="carousel-title">NICE P&I</h2>
+                        <h2 class="carousel-title">The Military Times</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ANNIVERSARY -->
+<div class="content-lg container">
+<h2>ANNIVERSARY</h2>
+
+  <div class="row row-space-1 margin-b-2">
+      <div class="col-sm-4 sm-margin-b-2">
+          <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+              <div class="service" data-height="height">
+                  <div class="service-element">
+                      <i class="service-icon icon-chemistry"></i>
+                  </div>
+                  <div class="service-info">
+                      <h3>입사일</h3>
+                      <h3>2017-01-23</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4 sm-margin-b-2">
+          <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
+              <div class="service" data-height="height">
+                  <div class="service-element">
+                      <i class="service-icon icon-screen-tablet"></i>
+                  </div>
+                  <div class="service-info">
+                      <h3>편입일</h3>
+                      <h3>2017-03-09</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
+              <div class="service" data-height="height">
+                  <div class="service-element">
+                      <i class="service-icon icon-badge"></i>
+                  </div>
+                  <div class="service-info">
+                      <h3>제대일</h3>
+                      <h3>2020-03-09</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!--// end row -->
+
+  <div class="row row-space-1">
+      <div class="col-sm-4 sm-margin-b-2">
+          <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".4s">
+              <div class="service" data-height="height">
+                  <div class="service-element">
+                      <i class="service-icon icon-notebook"></i>
+                  </div>
+                  <div class="service-info">
+                      <h3>입사한지</h3>
+                      <h3>
+                      <script>
+                      var date1 = new Date("01/23/2017");
+                      var date2 = new Date();
+                      var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                      document.write(diffDays);
+                      </script>
+                      일 째
+                      </h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4 sm-margin-b-2">
+          <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".5s">
+              <div class="service" data-height="height">
+                  <div class="service-element">
+                      <i class="service-icon icon-speedometer"></i>
+                  </div>
+                  <div class="service-info">
+                      <h3>편입한지</h3>
+                      <h3>
+                      <script>
+                      var date1 = new Date("03/09/2017");
+                      var date2 = new Date();
+                      var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                      document.write(diffDays);
+                      </script>
+                      일 째
+                      </h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".6s">
+              <div class="service" data-height="height">
+                  <div class="service-element">
+                      <i class="service-icon icon-badge"></i>
+                  </div>
+                  <div class="service-info">
+                      <h3>제대까지</h3>
+                      <h3>
+                      <script>
+                      var date1 = new Date();
+                      var date2 = new Date("03/09/2020");
+                      var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                      document.write(diffDays);
+                      </script>
+                      일 째
+                      </h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!--// end row -->
+</div>
+</div>
+<!-- End Service -->
+<!-- Pricing -->
+<div class="bg-color-sky-light">
+<div class="content-lg container">
+<h2>Birthday</h2>
+  <div class="row row-space-1">
+      <div class="col-sm-4 sm-margin-b-1">
+          <!-- Pricing -->
+          <div class="pricing">
+              <div class="margin-b-30">
+                  <i class="pricing-icon icon-chemistry"></i>
+                  <h3>김종호 (92.02.10)</h3>
+                  태어난지
+                  <script>
+                  var date1 = new Date("02/10/1992");
+                  var date2 = new Date();
+                  var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                  var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                  document.write(diffDays);
+                  </script>
+                  일 째
+                  <br>10000일 되는 날 2019-06-27</br>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-4 sm-margin-b-2">
+          <div class="pricing">
+            <div class="margin-b-30">
+                <i class="pricing-icon icon-chemistry"></i>
+                <h3>김태진 (92.03.04)</h3>
+                태어난지
+                <script>
+                var date1 = new Date("03/04/1992");
+                var date2 = new Date();
+                var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                document.write(diffDays);
+                </script>
+                일 째
+                <br>10000일 되는 날 2019-07-20</br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 sm-margin-b-2">
+          <div class="pricing">
+            <div class="margin-b-30">
+                <i class="pricing-icon icon-chemistry"></i>
+                <h3>류준규 (94.01.14)</h3>
+                태어난지
+                <script>
+                var date1 = new Date("01/14/1994");
+                var date2 = new Date();
+                var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                document.write(diffDays);
+                </script>
+                일 째
+                <br>10000일 되는 날 2021-05-31</br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 sm-margin-b-2">
+          <div class="pricing">
+            <div class="margin-b-30">
+                <i class="pricing-icon icon-chemistry"></i>
+                <h3>신건호 (93.01.27)</h3>
+                태어난지
+                <script>
+                var date1 = new Date("01/27/1993");
+                var date2 = new Date();
+                var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                document.write(diffDays);
+                </script>
+                일 째
+                <br>10000일 되는 날 2020-06-13</br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 sm-margin-b-2">
+        <div class="pricing">
+          <div class="margin-b-30">
+              <i class="pricing-icon icon-chemistry"></i>
+              <h3>윤병하 (93.09.28)</h3>
+              태어난지
+              <script>
+              var date1 = new Date("09/28/1993");
+              var date2 = new Date();
+              var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+              var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+              document.write(diffDays);
+              </script>
+              일 째
+              <br>10000일 되는 날 2021-02-12</br>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-sm-4 sm-margin-b-2">
+        <div class="pricing">
+          <div class="margin-b-30">
+              <i class="pricing-icon icon-chemistry"></i>
+              <h3>송형근 (95.04.12)</h3>
+              태어난지
+              <script>
+              var date1 = new Date("04/12/1995");
+              var date2 = new Date();
+              var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+              var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+              document.write(diffDays);
+              </script>
+              일 째
+              <br>10000일 되는 날 2022-08-27</br>
+          </div>
+        </div>
+        </div>
+  </div>
+  <!--// end row -->
+</div>
+</div>
+<!-- End Pricing -->
+<!-- Testimonials -->
+<div class="content-lg container">
+<div class="row">
+  <div class="col-sm-9">
+    <h2>Anniversary Dates</h2>
+        <!-- Swiper Testimonials -->
+        <div class="swiper-slider swiper-testimonials">
+            <!-- Swiper Wrapper -->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 100일 째 </h3>
+                          2017-06-16 <br>
+                          2017-07-07 여의도 애슐리 W+ 에서 식사
+                      </div>
+                  </blockquote>
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 200일 째 </h3>
+                          2017-09-24
+                      </div>
+                  </blockquote>
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 300일 째 </h3>
+                          2018-01-02
+                      </div>
+                  </blockquote>
+              </div>
+
+              <div class="swiper-slide">
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 1주년 </h3>
+                          2018-03-09
+                      </div>
+                  </blockquote>
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 400일 째 </h3>
+                          2018-04-12
+                      </div>
+                  </blockquote>
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 500일 째 </h3>
+                          2018-07-21
+                      </div>
+                  </blockquote>
+              </div>
+
+              <div class="swiper-slide">
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 600일 째 </h3>
+                          2018-10-29
+                      </div>
+                  </blockquote>
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 700일 째 </h3>
+                          2019-02-06
+                      </div>
+                  </blockquote>
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 2주년 </h3>
+                          2019-03-09
+                      </div>
+                  </blockquote>
+              </div>
+
+
+              <div class="swiper-slide">
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 800일 째 </h3>
+                          2019-05-17
+                      </div>
+                  </blockquote>
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 900일 째 </h3>
+                          2019-08-25
+                      </div>
+                  </blockquote>
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 1000일 째 </h3>
+                          2019-12-03
+                      </div>
+                  </blockquote>
+              </div>
+
+              <div class="swiper-slide">
+                  <blockquote class="blockquote">
+                      <div class="margin-b-20">
+                          <h3> 제대 </h3>
+                          2020-03-09
+                      </div>
+                  </blockquote>
+              </div>
+            </div>
+            <!-- End Swiper Wrapper -->
+
+            <!-- Pagination -->
+            <div class="swiper-testimonials-pagination"></div>
+        </div>
+        <!-- End Swiper Testimonials -->
+    </div>
+</div>
+
+<!-- End Latest ANNIVERSARY -->
+
+<!-- Testimonials -->
+<!-- Team -->
+<div class="bg-color-sky-light">
+    <div class="content-lg container">
+        <div class="row margin-b-40">
+            <div class="col-sm-6">
+                <h2>Meet the Team</h2>
+            </div>
+        </div>
+        <!--// end row -->
+
+        <div class="row">
+            <!-- Team -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive" src="{% static "img/teammember/kjh.jpg"%} "  alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">김종호</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+            <!-- End Team -->
+
+            <!-- Team -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive" src="{% static "img/teammember/sgh.jpg"%}" alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">신건호</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+            <!-- End Team -->
+
+            <!-- Team -->
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive" src="{% static "img/teammember/ybh.jpg"%}" alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">윤병하</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+		</div>
+        <div class="row">
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive"  style= "width: 95%; height: auto;" src="{% static "img/teammember/rjg2.png"%} "  alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">류준규</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive"  style= "width: 200%; height: auto;" src="{% static "img/teammember/ktj.jpg"%} "  alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">김태진</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+
+            <div class="col-sm-4 sm-margin-b-50">
+                <div class="bg-color-white margin-b-20">
+                    <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                        <img class="img-responsive" style= "width: 95%; height: auto;" src="{% static "img/teammember/shk.jpg"%} "  alt="Team Image">
+                    </div>
+                </div>
+                <h4><a href="#">송형근</a> <span class="text-uppercase margin-l-20">Quant</span></h4>
+                <a class="link" href="#">Read More</a>
+            </div>
+
+            <!-- End Team -->
+        </div>
+        <!--// end row -->
+    </div>
+  </div>
+</div>
+
+
+<div align="center">
+<img src="http://www.katc.mil.kr/_res/recruit_photo/sqd/20171109/20171109.20171111.230434.JPG" style="max-width:80%; height: auto;">
+</div>
+
+
+<!-- End Work -->
+{% endblock %}

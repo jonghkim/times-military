@@ -1,0 +1,28 @@
+{% extends "anniversary/layout.html" %}
+{% block content %}
+{% load static %}
+
+<!-- Wrapper for slides -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="img-responsive" src="{% static "img/1920x1080/01.jpg" %}" alt="Slider Image">
+            <div class="container">
+                <div class="carousel-centered">
+                  <p></p>
+                  <h1 class="carousel-title">New Restaurant</h1>
+                  <form method="POST" class="post-form">{% csrf_token %}
+                      {% for field in form %}
+                          <h3 style="color: #fff">{{field.label_tag}}</h3> {{ field }}
+                      {% endfor %}
+                      <p></p>
+                      <button type="submit" class="save btn btn-default">Save</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

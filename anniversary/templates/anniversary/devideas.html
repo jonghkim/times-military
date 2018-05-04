@@ -1,0 +1,82 @@
+{% extends "anniversary/layout.html" %}
+{% block head %}
+
+<style>
+div#disqus_thread {
+position: relative;
+background-color: #ffffff;
+border-radius: 3px;
+padding: 12px;
+}
+
+div#disqus_thread:after {
+     content: "";
+     display: block;
+     height: 55px;
+     width: 99%;
+     position: absolute;
+     bottom: 0;
+     background: white;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<!--========== PARALLAX ==========-->
+
+<!-- Wrapper for slides -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="img-responsive" src="{% static "img/1920x1080/01.jpg" %}" alt="Slider Image">
+            <div class="container">
+                <div class="carousel-centered">
+                    <div class="margin-b-40">
+                      <h1 class="carousel-title">Development Ideas</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="bg-color-sky-light">
+    <div class="content-lg container">
+
+        <div id="disqus_thread"></div>
+        <script>
+
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://military-times.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <!--// end row -->
+    </div>
+</div>
+<!--========== PARALLAX ==========-->
+
+<!--========== PAGE LAYOUT ==========-->
+<!-- Team -->
+<script id="dsq-count-scr" src="//military-times.disqus.com/count.js" async></script>
+<!-- End Team -->
+<!--========== END PAGE LAYOUT ==========-->
+<!-- End Work -->
+{% endblock %}
