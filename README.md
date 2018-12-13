@@ -3,10 +3,10 @@
 This repository is the home page for members who work as a substitute of mandatory military service at NICE P&I. 
 
 The key functions of this home page are as follows: 
-1. How many days remain until the end of the military service, what anniversary dates are (e.g. birthdays of members) and so on 
+1. How many days remain until the end of the military service
 2. Make a vote and leave comments on nearby restaurants (I named it "Military Guides")
 3. Visualize the debt relationship between members 
-4. See pictures of the members 
+4. Pictures of the members 
 5. Write opinions to upgrade the homepage
 
 ## Front Page
