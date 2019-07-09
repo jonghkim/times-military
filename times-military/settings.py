@@ -24,12 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 config = configparser.ConfigParser()
 config.read("config/config.ini")
-SECRET_KEY = config["DJANGO"]["secret_key"]
+SECRET_KEY = '=#^__utr#8cq3f71-g$yd^d#r3t0d!cl0s=z93x4y*c@l35)$n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [config["DJANGO"]["remote_host1"],config["DJANGO"]["remote_host2"]]
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 # Application definition
 
